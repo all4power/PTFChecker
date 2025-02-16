@@ -74,8 +74,8 @@
   //If any def ptf found sndptford + send email
   if ptffound>0;
     runCmd(%trim(cmd):%len(%trim(cmd)));
-    body=%trim(cmd)+'</body></html>'
-    cmd='SNDSMTPEMM RCP((''andrea.all4power@gmail.com'')) SUBJECT('''+%trim(subject)+
+    body=%trim(cmd)+'</body></html>';
+    cmd='SNDSMTPEMM RCP((''andrea.all4power@gmail.com'')) SUBJECT('''+%trim(subj)+
       ''') NOTE('''+%trim(body)+''') CONTENT(*HTML)';
     runCmd(%trim(cmd):%len(%trim(cmd)));
   endif;
