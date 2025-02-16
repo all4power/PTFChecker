@@ -1,19 +1,18 @@
 **FREE
 
  //-----------------------------------------------------------------------
- // Setta AUTL
  // Autore: Andrea Buzzi
  //-----------------------------------------------------------------------
 
  Ctl-Opt decedit('0,') datedit(*dmy.) DFTACTGRP(*NO);
- ctl-opt main(setautl);
+ ctl-opt main(ptcheck);
 
  Dcl-PR runCmd ExtPgm('QCMDEXC');
   Command Char(500) Const;
   Length Packed(15:5) Const;
  END-PR;
 
- dcl-proc setautl;
+ dcl-proc ptcheck;
 
 // Inizio procedura principale.
   dcl-pi *N;
